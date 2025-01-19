@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GOAL SCRIPT</title>
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="stylesf.css">
+    <!-- Include Chart.js library for charts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Function to toggle between light and dark themes
+        function toggleTheme() {
+            const html = document.documentElement;
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        }
+
+        // Retrieve and set saved theme from localStorage
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+
+        // Function to add a new user to the leaderboard
+        function addUserToLeaderboard(name, points) {
+            const leaderboard = document.getElementById('leaderboard');
+            const userItem = document.createElement('li');
+            userItem.textContent = `${name} - ${points} points`;
+            leaderboard.appendChild(userItem);
+        }
+
+        // Add some default users to the leaderboard when the page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            addUserToLeaderboard('samarth', 120);
+            addUserToLeaderboard('oggy', 95);
+            addUserToLeaderboard('chatcat', 85);
+        });
+    </script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <!-- Logo with Animation -->
+        <img src="logo2.PNG" alt="Logo" class="logo">
+      
+        <!-- Header Title (Goal Script Topic) with Animation -->
+        <h1>GOAL SCRIPT</h1>
+      
+        <!-- Theme Toggle Button with Animation -->
+        <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+        <!-- Task Management Section -->
+        <div class="main-section">
+            <h2>Task Management</h2>
+            <div class="task-input">
+                <!-- Input fields for task details -->
+                <input type="text" id="taskInput" placeholder="Enter your task">
+                <input type="time" id="startTime">
+                <input type="time" id="endTime">
+                <button onclick="addTask()">Add Task</button>
+            </div>
+            <div class="task-list" id="taskList"></div>
+
+            <!-- Leaderboard Section -->
+            <div class="leaderboard">
+                <h3>Leaderboard</h3>
+                <ul id="leaderboard"></ul>
+            </div>
+        </div>
+
+        <!-- Calendar Section -->
+        <div class="main-section">
+            <h2>Calendar</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Sun</th>
+                        <th>Mon</th>
+                        <th>Tue</th>
+                        <th>Wed</th>
+                        <th>Thu</th>
+                        <th>Fri</th>
+                        <th>Sat</th>
+                    </tr>
+                </thead>
+                <tbody id="calendar-body"></tbody>
+            </table>
+        </div>
+
+        <!-- Progress Section -->
+        <div class="main-section">
+            <h2>Progress</h2>
+            <!-- Badges -->
+            <div>
+                <img src="level1gs.PNG" alt="Badge 1" class="badge" id="badge1">
+                <img src="level2gs.PNG" alt="Badge 2" class="badge" id="badge2">
+                <img src="level3gs.PNG" alt="Badge 3" class="badge" id="badge3">
+            </div>
+            <!-- XP and Streak Counters -->
+            <div class="xp-counter" id="xpCounter">XP: 0</div>
+            <div class="streak-counter" id="streakCounter">Streak: 0</div>
+            <!-- Charts -->
+            <div class="charts">
+                <canvas id="dailyGrowthChart"></canvas>
+                <canvas id="monthlyGrowthChart"></canvas>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <!-- About Us Section -->
+            <div class="footer-section about">
+                <h3>About Us</h3>
+                <p>
+                    Our platform helps users manage their time effectively and achieve daily writing goals. 
+                    We encourage timely task completion to reduce stress and boost productivity. 
+                    Our mission is to emphasize the importance of time management and efficient time utilization, 
+                    reinforcing the idea that "Time is money."
+                </p>
+            </div>
+
+            <!-- Quick Links Section -->
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Tasks</a></li>
+                    <li><a href="#">Calendar</a></li>
+                    <li><a href="#">Progress</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Us Section -->
+            <div class="footer-section contact">
+                <h3>Contact Us</h3>
+                <p>Email: <a href="mailto:pawar.sarthak200424@gmail.com">xyz.com</a></p>
+                <p>Phone: <a href="tel:7987354601"></a></p>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            &copy; @GOAL SCRIPT  | Designed by Sarthak Pawar
+        </div>
+    </footer>
+
+    <!-- External JavaScript File -->
+    <script src="scriptf.js"></script>
+</body>
+</html>
