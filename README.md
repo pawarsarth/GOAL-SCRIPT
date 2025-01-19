@@ -84,8 +84,8 @@
 
 #### **Screenshots**:
 - **Daily Writing Goal Tracking**:
-  ![Writing Task Management](/adding task.PNG)
-  ![Writing Task Management](/adding task2.PNG)
+  ![Writing Task Management](/addingtask.PNG)
+  ![Writing Task Management](/addingtask2.PNG)
 - **Calendar View**:
   ![Calendar](calender1.PNG)
 - **Progress Tracking**:
