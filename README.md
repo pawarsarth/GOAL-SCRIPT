@@ -84,13 +84,15 @@
 
 #### **Screenshots**:
 - **Daily Writing Goal Tracking**:
-  ![Writing Task Management](screenshots/writing-task-management.png)
+  ![Writing Task Management](/adding task.PNG)
+  ![Writing Task Management](/adding task2.PNG)
 - **Calendar View**:
-  ![Calendar](screenshots/calendar.png)
+  ![Calendar](calender1.PNG)
 - **Progress Tracking**:
-  ![Progress](screenshots/progress.png)
+  ![Progress](pick2.PNG)
+  ![Progress](progress.PNG)
 - **Leaderboard**:
-  ![Leaderboard](screenshots/leaderboard.png)
+  ![Leaderboard](leaderboard.PNG)
 
 ---
 
@@ -153,3 +155,5 @@
 
 ### Conclusion
 The **Goal Script - Daily Writing Goal Tracker** is a powerful tool for managing writing tasks, tracking progress, and staying productive. With its intuitive design, responsive layout, and engaging features, it helps users make the most of their writing time. Future enhancements can further elevate the user experience and functionality.
+
+Let me know if you need further assistance! 🚀
